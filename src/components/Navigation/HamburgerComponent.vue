@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div class="lg:hidden">
     <img
       class="w-7 h-7"
       src="@/assets/pasta.png"
       alt="hamburger icon"
       @click="hamburgerOpen"
     />
-    <ul v-if="this.open">
+    <ul
+      v-if="this.open"
+      class="w-full space-x-3 bg-dark flex flex-col text-center items-center justify-center mx-auto fixed left-0 top-12"
+    >
       <li><a href="#home">home</a></li>
       <li><a href="#about-us">about us</a></li>
       <li><a href="#menu">menu</a></li>
@@ -36,4 +39,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+li {
+  @apply p-1 uppercase hover:bg-dull hover:text-primary w-full;
+}
+a {
+  @apply hover:cursor-pointer;
+}
+</style>
