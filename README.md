@@ -9,3 +9,4 @@
 - [Vue testing library](https://testing-library.com/docs/vue-testing-library/intro)
 - [DOM testing library](https://testing-library.com/docs/dom-testing-library/install)
 - [Jest dom testing library](https://testing-library.com/docs/ecosystem-jest-dom)
+- [hamburger icon](https://www.flaticon.com/free-icon/pasta_2515207?term=pasta&related_id=2515207)
