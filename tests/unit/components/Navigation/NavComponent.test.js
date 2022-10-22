@@ -1,7 +1,8 @@
 import { screen, render } from "@testing-library/vue";
 import "@testing-library/jest-dom";
+import userEvent from "@testing-library/user-event";
 import NavComponent from "@/components/Navigation/NavComponent.vue";
-//hamburger shows list item when clicked
+
 describe("NavComponnet", () => {
   describe("layout", () => {
     it("has a heading", () => {
@@ -23,11 +24,6 @@ describe("NavComponnet", () => {
       render(NavComponent);
       let listItems = screen.queryAllByRole("listitem");
       expect(listItems.length).toBe(5);
-    });
-    it("has a hamburger icon", () => {
-      render(NavComponent);
-      let hamburger = screen.queryByRole("img");
-      expect(hamburger).toBeInTheDocument();
     });
     it("has 5 links", () => {
       render(NavComponent);
@@ -86,6 +82,43 @@ describe("NavComponnet", () => {
         render(NavComponent);
         let contact = screen.queryByText("contact");
         expect(contact).toHaveAttribute("href", "#contact");
+      });
+    });
+    describe("clicking on links goes to appropriate url", () => {
+      it("goes to /#home", async () => {
+        const user = userEvent.setup();
+        render(NavComponent);
+        let home = screen.queryByText("home");
+        await user.click(home);
+        expect(window.location.href).toContain("/#home");
+      });
+      it("goes to '/#about-us'", async () => {
+        const user = userEvent.setup();
+        render(NavComponent);
+        let aboutUs = screen.queryByText("about us");
+        await user.click(aboutUs);
+        expect(window.location.href).toContain("/#about-us");
+      });
+      it("goes to '/#menu'", async () => {
+        const user = userEvent.setup();
+        render(NavComponent);
+        let menu = screen.queryByText("menu");
+        await user.click(menu);
+        expect(window.location.href).toContain("/#menu");
+      });
+      it("goes to '/#gallery'", async () => {
+        const user = userEvent.setup();
+        render(NavComponent);
+        let gallery = screen.queryByText("gallery");
+        await user.click(gallery);
+        expect(window.location.href).toContain("/#gallery");
+      });
+      it("goes to '/#contact'", async () => {
+        const user = userEvent.setup();
+        render(NavComponent);
+        let contact = screen.queryByText("contact");
+        await user.click(contact);
+        expect(window.location.href).toContain("/#contact");
       });
     });
   });

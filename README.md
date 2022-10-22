@@ -8,5 +8,6 @@
 - [Vue test utils](https://test-utils.vuejs.org/installation/)
 - [Vue testing library](https://testing-library.com/docs/vue-testing-library/intro)
 - [DOM testing library](https://testing-library.com/docs/dom-testing-library/install)
+- [User event testing library](https://testing-library.com/docs/user-event/install)
 - [Jest dom testing library](https://testing-library.com/docs/ecosystem-jest-dom)
 - [hamburger icon](https://www.flaticon.com/free-icon/pasta_2515207?term=pasta&related_id=2515207)
