@@ -1,9 +1,26 @@
 <template>
-  <section>this is hero component</section>
+  <section
+    class="bg-image bg-primary w-full mt-12 text-highligth font-semibold"
+  >
+    <div
+      class="flex flex-col justify-center items-center mx-auto text-center p-3"
+    >
+      <img class="mx-auto w-24" src="@/assets/logo.png" alt="logo image" />
+      <h2>Pasta with a soul</h2>
+      <hr />
+      <div role="paragraph">Takeaway | Delivery</div>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style></style>
+<style scoped>
+.bg-image {
+  background-image: url("@/assets/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
