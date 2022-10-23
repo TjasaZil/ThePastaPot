@@ -8,8 +8,12 @@
         <hr />
       </div>
       <ul class="flex flex-wrap justify-center items-center mt-5">
-        <li v-for="img in images" :key="img" class="w-full">
-          <img :src="img" alt="pasta" />
+        <li
+          v-for="img in images"
+          :key="img"
+          class="w-full hover:bg-dull hover:opacity-40"
+        >
+          <img :src="img.image" :alt="img.alt" />
         </li>
       </ul>
     </div>
@@ -49,18 +53,18 @@ export default {
   data() {
     return {
       images: [
-        pasta1,
-        pasta2,
-        pasta3,
-        pasta4,
-        pasta5,
-        pasta6,
-        pasta7,
-        pasta8,
-        pasta9,
-        pasta10,
-        pasta11,
-        pasta12,
+        { image: pasta1, alt: "pasta1" },
+        { image: pasta2, alt: "pasta2" },
+        { image: pasta3, alt: "pasta3" },
+        { image: pasta4, alt: "pasta4" },
+        { image: pasta5, alt: "pasta5" },
+        { image: pasta6, alt: "pasta6" },
+        { image: pasta7, alt: "pasta7" },
+        { image: pasta8, alt: "pasta8" },
+        { image: pasta9, alt: "pasta9" },
+        { image: pasta10, alt: "pasta10" },
+        { image: pasta11, alt: "pasta11" },
+        { image: pasta12, alt: "pasta12" },
       ],
     };
   },
