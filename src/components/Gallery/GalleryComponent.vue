@@ -3,15 +3,15 @@
     <div
       class="flex flex-col w-full justify-center items-center text-center text-highligth mx-auto"
     >
-      <div class="space-y-3">
+      <div class="space-y-3 p-8">
         <h2>gallery</h2>
         <hr />
       </div>
-      <ul class="flex flex-wrap justify-center items-center mt-5">
+      <ul class="flex flex-wrap justify-center items-center mt-16">
         <li
           v-for="img in images"
           :key="img"
-          class="w-full hover:bg-dull hover:opacity-40"
+          class="w-full hover:bg-dull hover:opacity-40 max-w-md"
         >
           <img :src="img.image" :alt="img.alt" />
         </li>
