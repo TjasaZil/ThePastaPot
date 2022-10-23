@@ -10,4 +10,5 @@
 - [DOM testing library](https://testing-library.com/docs/dom-testing-library/install)
 - [User event testing library](https://testing-library.com/docs/user-event/install)
 - [Jest dom testing library](https://testing-library.com/docs/ecosystem-jest-dom)
-- [hamburger icon](https://www.flaticon.com/free-icon/pasta_2515207?term=pasta&related_id=2515207)
+- [Hamburger icon](https://www.flaticon.com/free-icon/pasta_2515207?term=pasta&related_id=2515207)
+- [Pictures source](https://pixabay.com/photos/search/pasta/?manual_search=1&pagi=2)
