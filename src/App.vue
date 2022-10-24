@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="font-sans">
     <NavComponent />
     <HeroComponent />
     <RestaurantComponent />
@@ -40,6 +40,15 @@ export default {
 
 <style>
 h2 {
-  @apply uppercase text-3xl font-bold;
+  @apply uppercase text-4xl font-extrabold;
+}
+h3 {
+  @apply uppercase text-3xl font-bold text-dull;
+}
+h4 {
+  @apply capitalize text-base font-bold text-dark;
+}
+h5 {
+  @apply uppercase text-lg font-black text-dull;
 }
 </style>

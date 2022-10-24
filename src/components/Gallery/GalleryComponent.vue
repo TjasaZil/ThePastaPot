@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-8 pt-5 bg-dark w-full">
+  <section id="gallery" class="mt-8 pt-5 bg-dark w-full">
     <div
       class="flex flex-col w-full justify-center items-center text-center text-highligth mx-auto"
     >

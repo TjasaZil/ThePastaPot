@@ -1,22 +1,25 @@
 <template>
   <section
-    class="p-4 pt-8 flex flex-col justify-start items-center text-left w-full m-auto"
+    id="menu"
+    class="p-10 pt-8 flex flex-col justify-start items-start text-left w-full m-auto"
   >
     <h2>menu</h2>
-    <h3>pasta</h3>
+    <h3 class="mt-5">pasta</h3>
     <SmallMenuComponent
       v-for="menu in menus"
       :key="menu"
       :heading="menu.head"
       :price="menu.price"
       :text="menu.text"
+      class="mt-5"
     />
-    <h3>drinks</h3>
+    <h3 class="mt-5">drinks</h3>
     <SmallMenuComponent
       v-for="drink in drinks"
       :key="drink"
       :heading="drink.head"
       :price="drink.price"
+      class="mt-5"
     />
   </section>
 </template>

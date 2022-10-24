@@ -1,5 +1,6 @@
 <template>
   <section
+    id="home"
     class="bg-image bg-primary w-full mt-12 text-highligth font-semibold"
   >
     <div

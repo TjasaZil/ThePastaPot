@@ -1,5 +1,6 @@
 <template>
   <section
+    id="about-us"
     class="mt-16 flex flex-col justify-center items-center text-left w-5/6 mx-auto space-y-3"
   >
     <img src="@/assets/restaurant.jpg" alt="restaurant image" />

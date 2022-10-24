@@ -1,5 +1,6 @@
 <template>
   <section
+    id="contact"
     class="pt-12 bg-dark text-highligth w-full flex flex-col justify-center items-center mx-auto text-center"
   >
     <h2>contact</h2>
