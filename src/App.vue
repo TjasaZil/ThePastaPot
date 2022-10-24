@@ -5,6 +5,7 @@
     <RestaurantComponent />
     <ChefComponent />
     <WorkingHours />
+    <MenuComponent />
     <GalleryComponent />
     <ContactComponent />
     <FooterComponent />
@@ -20,6 +21,7 @@ import WorkingHours from "./components/Hours/WorkingHours.vue";
 import GalleryComponent from "./components/Gallery/GalleryComponent.vue";
 import ContactComponent from "./components/Contact/ContactComponent.vue";
 import FooterComponent from "./components/Footer/FooterComponent.vue";
+import MenuComponent from "./components/Menu/MenuComponent.vue";
 export default {
   name: "App",
   components: {
@@ -31,6 +33,7 @@ export default {
     GalleryComponent,
     ContactComponent,
     FooterComponent,
+    MenuComponent,
   },
 };
 </script>
