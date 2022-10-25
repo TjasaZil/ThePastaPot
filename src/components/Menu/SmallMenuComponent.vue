@@ -1,6 +1,6 @@
 <template>
   <section class="w-full mx-auto text-left">
-    <div class="flex flex-row justify-start w-4/6 items-start space-x-3">
+    <div class="flex flex-row justify-start w-full items-start space-x-3">
       <h4>{{ heading }}</h4>
       <h5>{{ price }}</h5>
     </div>
@@ -21,11 +21,11 @@ export default {
     text: {
       type: String,
       required: false,
+      default: "",
     },
     price: {
       type: String,
       required: true,
-      default: "",
     },
   },
 };

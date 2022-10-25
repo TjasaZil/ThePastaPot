@@ -1,5 +1,5 @@
 <template>
-  <section class="font-sans">
+  <section class="font-sans overflow-x-hidden">
     <NavComponent />
     <HeroComponent />
     <RestaurantComponent />

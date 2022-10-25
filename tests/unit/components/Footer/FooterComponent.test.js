@@ -58,6 +58,20 @@ describe("FooterComponent", () => {
       render(FooterComponent);
       let instagram = screen.queryByAltText("instagram");
       expect(instagram).toBeVisible();
+    }); /*
+    it("has right attribute for facebook icon", () => {
+      render(FooterComponent);
+      let facebook = screen.queryByAltText("facebook");
+      let src = facebook.getAttribute("src");
+      expect(src).toBe("@/assets/contact/facebook.png");
     });
+    it("has right attribute instagram icon", () => {
+      render(FooterComponent);
+      let instagram = screen.queryByAltText("instagram");
+      expect(instagram).toHaveAttribute(
+        "src",
+        "@/assets/contact/instagram.png"
+      );
+    });*/
   });
 });

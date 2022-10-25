@@ -1,7 +1,7 @@
 <template>
   <section
     id="menu"
-    class="p-10 pt-8 flex flex-col justify-start items-start text-left w-full m-auto"
+    class="p-10 pt-8 flex flex-col justify-start items-start text-left w-5/6 m-auto"
   >
     <h2>menu</h2>
     <h3 class="mt-5">pasta</h3>
