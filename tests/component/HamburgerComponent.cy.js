@@ -17,6 +17,12 @@ describe("HamburgerComponent", () => {
       cy.mount(HamburgerComponent);
       cy.findByRole("link").should("not.exist");
     });
+    it("clicking twice on hamburger icon makes links dissapear", () => {
+      cy.mount(HamburgerComponent);
+      cy.findByRole("img").click();
+      cy.findByRole("img").click();
+      cy.findByRole("link").should("not.exist");
+    });
   });
   describe("testing links", () => {
     it("has proper home link", () => {
