@@ -30,6 +30,6 @@ export default {
 
 <style scoped>
 li {
-  @apply mr-4;
+  @apply mr-4 uppercase;
 }
 </style>
