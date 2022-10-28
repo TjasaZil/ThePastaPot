@@ -10,6 +10,14 @@ module.exports = {
       highligth: "#f4f3ee",
       dull: "#e0afa0",
     },
+    screens: {
+      mobilem: "375px",
+      mobilel: "425px",
+      tablet: "768px",
+      laptop: "1024px",
+      laptopl: "1440px",
+      "4kay": "2560px",
+    },
   },
   plugins: [],
 };

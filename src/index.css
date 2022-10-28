@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h2 {
+  @apply uppercase text-3xl font-extrabold;
+}
+h3 {
+  @apply uppercase text-2xl font-bold text-dull;
+}
+h4 {
+  @apply capitalize text-base font-bold text-dark;
+}
+h5 {
+  @apply uppercase text-lg font-black text-dull;
+}
