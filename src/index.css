@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+h1 {
+  @apply uppercase text-4xl font-extrabold;
+}
+
 h2 {
   @apply uppercase text-3xl font-extrabold;
 }
