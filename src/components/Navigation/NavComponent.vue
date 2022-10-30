@@ -1,6 +1,6 @@
 <template>
   <section
-    class="fixed top-0 left-0 w-full bg-dark text-highligth h-12 tablet:h-16 laptop:h-18 laptopl:h-20 4kay:h-32"
+    class="fixed top-0 left-0 w-full bg-dark text-highligth h-12 tablet:h-16 laptop:h-18 laptopl:h-20 4kay:h-32 z-50"
   >
     <div
       class="w-full h-12 flex justify-between items-center p-4 mx-auto tablet:h-16 laptop:h-18 laptopl:h-20 4kay:h-32"
