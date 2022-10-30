@@ -7,11 +7,13 @@
         <h2>gallery</h2>
         <hr />
       </div>
-      <ul class="flex flex-wrap justify-center items-center mt-16">
+      <ul
+        class="flex flex-wrap laptopl:w-11/12 mx-auto justify-center items-center mt-16"
+      >
         <li
           v-for="img in images"
           :key="img"
-          class="w-full hover:bg-dull hover:opacity-40 max-w-md"
+          class="w-full mobilel:w-5/6 tablet:w-3/6 laptopl:w-1/3 4kay:w-1/4 hover:bg-dull hover:opacity-40 p-0 m-0 overflow-hidden"
         >
           <img :src="img.image" :alt="img.alt" />
         </li>
@@ -34,6 +36,7 @@ import pasta9 from "@/assets/gallery/pasta9.jpg";
 import pasta10 from "@/assets/gallery/pasta10.jpg";
 import pasta11 from "@/assets/gallery/pasta11.jpg";
 import pasta12 from "@/assets/gallery/pasta12.jpg";
+//max-w-md
 export default {
   name: "GalleryComponent",
   components: {
@@ -71,4 +74,21 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+/*img {
+  @apply w-full scale-100 hover:scale-105 transition-all;
+}
+li {
+  @apply hover:scale-100;
+}*/
+li img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out;
+}
+li:hover img {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+</style>

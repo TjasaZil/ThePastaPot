@@ -1,13 +1,13 @@
 <template>
   <section
     id="home"
-    class="bg-image bg-primary w-full mt-12 tablet:mt-16 laptop:mt-18 laptopl:mt-20 4kay:mt-36 text-highligth font-semibold"
+    class="bg-image bg-primary w-full mt-12 tablet:mt-16 laptop:mt-18 4kay:mt-32 text-highligth font-semibold"
   >
     <div
       class="flex flex-col justify-center items-center mx-auto text-center p-3 space-y-3 tablet:space-y-5 laptop:space-y-7 laptopl:space-y-9 4kay:space-y-14"
     >
       <img
-        class="mx-auto w-24 tablet:w-32 tablet:mt-5 laptop:mt-6 laptop:w-36 laptopl:w-40 4kay:mt-12 4kay:w-56"
+        class="mx-auto w-24 tablet:w-32 tablet:pt-5 laptop:pt-6 laptop:w-36 laptopl:w-40 4kay:pt-12 4kay:w-56"
         src="@/assets/logo.png"
         alt="logo image"
       />
