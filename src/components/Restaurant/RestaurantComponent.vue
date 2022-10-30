@@ -9,16 +9,16 @@
       class="laptop:w-1/2 4kay:w-1/3"
     />
     <section
-      class="flex flex-col tablet:space-y-2 laptop:w-1/2 laptop:space-y-3 4kay:space-y-5"
+      class="flex flex-col tablet:space-y-2 laptop:w-1/2 laptop:space-y-3 4kay:space-y-7"
     >
       <h2
-        class="capitalize text-left text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-4xl 4kay:text-5xl text-dark font-semibold pt-8 laptop:pt-0"
+        class="capitalize text-left text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-4xl 4kay:text-6xl text-dark font-semibold pt-8 laptop:pt-0"
       >
         old story, new location
       </h2>
       <hr class="w-1/6 h-1 border border-solid border-secondary bg-secondary" />
       <h3
-        class="uppercase text-left text-lg tablet:text-xl laptop:text-lg laptopl:text-xl 4kay:text-2xl text-primary font-medium"
+        class="uppercase text-left text-lg tablet:text-xl laptop:text-lg laptopl:text-xl 4kay:text-3xl text-primary font-medium"
       >
         welcome to the pasta pot
       </h3>
@@ -45,6 +45,6 @@ export default {
 
 <style scoped>
 div {
-  @apply text-base tablet:text-lg laptop:text-base laptopl:text-lg 4kay:text-xl;
+  @apply text-base tablet:text-lg laptop:text-base laptopl:text-lg 4kay:text-2xl;
 }
 </style>
