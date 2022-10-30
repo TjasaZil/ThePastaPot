@@ -1,14 +1,14 @@
 <template>
-  <div class="lg:hidden">
+  <div class="laptop:hidden">
     <img
-      class="w-7 h-7"
+      class="w-7 h-7 tablet:h-10 tablet:w-10"
       src="@/assets/pasta.png"
       alt="hamburger icon"
       @click="hamburgerOpen"
     />
     <ul
       v-if="this.open"
-      class="w-full space-x-3 bg-dark flex flex-col text-center items-center justify-center mx-auto fixed left-0 top-12"
+      class="w-full space-x-3 bg-dark flex flex-col text-center items-center justify-center mx-auto fixed left-0 top-12 tablet:top-14"
     >
       <li><a href="#home">home</a></li>
       <li><a href="#about-us">about us</a></li>
@@ -41,7 +41,7 @@ export default {
 
 <style scoped>
 li {
-  @apply p-1 uppercase hover:bg-dull hover:text-primary w-full;
+  @apply p-1 uppercase hover:bg-dull hover:text-primary w-full tablet:p-2 tablet:text-lg;
 }
 a {
   @apply hover:cursor-pointer;
