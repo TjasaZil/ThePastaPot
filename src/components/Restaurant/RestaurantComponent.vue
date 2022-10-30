@@ -9,7 +9,7 @@
       class="laptop:w-1/2 4kay:w-1/3"
     />
     <section
-      class="flex flex-col tablet:space-y-2 laptop:w-1/2 laptop:space-y-3 4kay:space-y-7"
+      class="flex flex-col space-y-2 laptop:w-1/2 laptop:space-y-3 4kay:space-y-7"
     >
       <h2
         class="capitalize text-left text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-4xl 4kay:text-6xl text-dark font-semibold pt-8 laptop:pt-0"

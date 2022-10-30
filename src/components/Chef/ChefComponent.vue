@@ -3,7 +3,7 @@
     class="mt-10 flex flex-col justify-center items-center text-left w-5/6 mx-auto space-y-3 tablet:space-y-5 laptop:flex-row laptop:space-x-4 laptopl:space-x-5 laptopl:mt-18 4kay:space-x-10 4kay:mt-24"
   >
     <section
-      class="flex flex-col laptop:w-1/2 tablet:space-y-2 laptop:space-y-3 4kay:space-y-7"
+      class="flex flex-col laptop:w-1/2 space-y-2 laptop:space-y-3 4kay:space-y-7"
     >
       <h2
         class="capitalize text-left text-3xl tablet:text-4xl laptop:text-3xl laptopl:text-4xl 4kay:text-6xl text-dark font-semibold pt-8 laptop:pt-0"
