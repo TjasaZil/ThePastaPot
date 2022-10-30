@@ -7,14 +7,14 @@ h1 {
 }
 
 h2 {
-  @apply uppercase text-lg tablet:text-xl laptopl:text-2xl 4kay:text-5xl font-extrabold;
+  @apply uppercase text-2xl tablet:text-3xl laptopl:text-4xl 4kay:text-7xl font-extrabold;
 }
 h3 {
-  @apply uppercase text-2xl font-bold text-dull;
+  @apply uppercase text-2xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl 4kay:text-7xl font-bold text-dull;
 }
 h4 {
-  @apply capitalize text-base font-bold text-dark;
+  @apply capitalize text-base tablet:text-lg laptop:text-xl laptopl:text-2xl 4kay:text-4xl font-bold text-dark;
 }
 h5 {
-  @apply uppercase text-lg font-black text-dull;
+  @apply uppercase text-lg tablet:text-xl laptop:text-2xl laptopl:text-3xl 4kay:text-4xl font-black text-dull;
 }

@@ -1,26 +1,32 @@
 <template>
   <section
     id="menu"
-    class="p-10 pt-8 flex flex-col justify-start items-start text-left w-5/6 m-auto"
+    class="p-10 pt-8 tablet:pt-10 laptop:pt-12 laptopl:pt-14 4kay:pt-16 flex flex-col justify-start items-start w-5/6 m-auto laptop:flex-row laptop:space-x-4"
   >
-    <h2>menu</h2>
-    <h3 class="mt-5">pasta</h3>
-    <SmallMenuComponent
-      v-for="menu in menus"
-      :key="menu"
-      :heading="menu.head"
-      :price="menu.price"
-      :text="menu.text"
-      class="mt-5"
-    />
-    <h3 class="mt-5">drinks</h3>
-    <SmallMenuComponent
-      v-for="drink in drinks"
-      :key="drink"
-      :heading="drink.head"
-      :price="drink.price"
-      class="mt-5"
-    />
+    <section class="flex flex-col laptop:w-1/2 text-left">
+      <h2>menu</h2>
+      <h3>pasta</h3>
+      <SmallMenuComponent
+        v-for="menu in menus"
+        :key="menu"
+        :heading="menu.head"
+        :price="menu.price"
+        :text="menu.text"
+        class="mt-5"
+      />
+    </section>
+    <section
+      class="flex flex-col laptop:w-1/2 text-left justify-start items-start laptop:pt-7 laptopl:pt-9 4kay:pt-11"
+    >
+      <h3>drinks</h3>
+      <SmallMenuComponent
+        v-for="drink in drinks"
+        :key="drink"
+        :heading="drink.head"
+        :price="drink.price"
+        class="mt-5"
+      />
+    </section>
   </section>
 </template>
 
@@ -89,4 +95,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+h3 {
+  @apply pt-7 tablet:pt-9 laptop:pt-11 laptopl:pt-14 4kay:pt-16;
+}
+</style>
