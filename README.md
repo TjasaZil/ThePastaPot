@@ -18,20 +18,20 @@ I defined all of the animation keyframes and classes in the index.css file and t
 
 <br>
 <p> 320px</p>
-<img src="src/assets/readmePictures/320.JPG" alt="testing" width="75%"/>
+<img src="src/assets/readmePictures/320.JPG" alt="testing" width="25%"/>
 <br><br>
 <p> 375px</p>
-<img src="src/assets/readmePictures/375.JPG" alt="testing" width="75%"/>
+<img src="src/assets/readmePictures/375.JPG" alt="testing" width="25%"/>
 <br><br>
 <p> 425px</p>
-<img src="src/assets/readmePictures/425.JPG" alt="testing" width="75%"/>
+<img src="src/assets/readmePictures/425.JPG" alt="testing" width="25%"/>
 
 ### Tablet layout:
 
 <br><br>
 
 <p> 768px</p>
-<img src="src/assets/readmePictures/768.JPG" alt="testing" width="75%"/>
+<img src="src/assets/readmePictures/768.JPG" alt="testing" width="33%"/>
 
 ### Laptop layout:
 
