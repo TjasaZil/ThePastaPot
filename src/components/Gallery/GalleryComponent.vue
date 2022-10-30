@@ -15,7 +15,11 @@
           :key="img"
           class="w-full mobilel:w-5/6 tablet:w-3/6 laptopl:w-1/3 4kay:w-1/4 hover:bg-dull hover:opacity-40 p-0 m-0 overflow-hidden"
         >
-          <img :src="img.image" :alt="img.alt" />
+          <img
+            :src="img.image"
+            :alt="img.alt"
+            x-intersect="$el.classList.add('rollInBlurredLeft')"
+          />
         </li>
       </ul>
     </div>

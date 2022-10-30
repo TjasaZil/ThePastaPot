@@ -4,6 +4,7 @@
   >
     <div
       class="w-5/6 mx-auto flex flex-col justify-center items-center py-4 space-y-3 tablet:space-y-4 tablet:py-6 laptop:py-8 laptopl:py-10 4kay:py-14 4kay:space-y-9"
+      x-intersect="$el.classList.add('fadeIn')"
     >
       <h2>working hours</h2>
       <hr class="w-1/6 border border-solid border-secondary h-1 bg-dull" />

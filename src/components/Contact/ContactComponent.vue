@@ -2,6 +2,7 @@
   <section
     id="contact"
     class="pt-12 bg-dark text-highligth w-full flex flex-col justify-center items-center mx-auto text-center space-y-3 4kay:space-y-6"
+    x-intersect="$el.classList.add('swingIn')"
   >
     <h2>contact</h2>
     <hr />

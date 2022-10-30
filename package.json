@@ -12,6 +12,8 @@
     "cypress:open": "cypress open"
   },
   "dependencies": {
+    "@alpinejs/intersect": "^3.10.5",
+    "alpinejs": "^3.10.5",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue3-google-map": "^0.15.0",

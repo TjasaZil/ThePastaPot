@@ -10,12 +10,16 @@
         class="mx-auto w-24 tablet:w-32 tablet:pt-5 laptop:pt-6 laptop:w-36 laptopl:w-40 4kay:pt-12 4kay:w-56"
         src="@/assets/logo.png"
         alt="logo image"
+        x-intersect="$el.classList.add('fadeIn')"
       />
-      <h2>Pasta with a soul</h2>
+      <h2 x-intersect="$el.classList.add('fadeLeftRight')">
+        Pasta with a soul
+      </h2>
       <hr class="w-4/6 h-1 bg-dull border border-solid border-dull" />
       <div
         role="paragraph"
         class="tablet:text-base tablet:pb-2 laptop:text-lg laptop:pb-4 laptopl:text-xl laptopl:pb-6 4kay:text-3xl 4kay:pb-8"
+        x-intersect="$el.classList.add('fadeRightLeft')"
       >
         Takeaway | Delivery
       </div>

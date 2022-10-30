@@ -2,19 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-h1 {
-  @apply uppercase text-xl font-extrabold tablet:text-2xl laptopl:text-3xl 4kay:text-6xl;
+@layer components {
+  h1 {
+    @apply uppercase text-xl font-extrabold tablet:text-2xl laptopl:text-3xl 4kay:text-6xl;
+  }
+
+  h2 {
+    @apply uppercase text-2xl tablet:text-3xl laptopl:text-4xl 4kay:text-7xl font-extrabold;
+  }
+  h3 {
+    @apply uppercase text-2xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl 4kay:text-7xl font-bold text-dull;
+  }
+  h4 {
+    @apply capitalize text-base tablet:text-lg laptop:text-xl laptopl:text-2xl 4kay:text-4xl font-bold text-dark;
+  }
+  h5 {
+    @apply uppercase text-lg tablet:text-xl laptop:text-2xl laptopl:text-3xl 4kay:text-4xl font-bold text-dull;
+  }
 }
 
-h2 {
-  @apply uppercase text-2xl tablet:text-3xl laptopl:text-4xl 4kay:text-7xl font-extrabold;
-}
-h3 {
-  @apply uppercase text-2xl tablet:text-3xl laptop:text-4xl laptopl:text-5xl 4kay:text-7xl font-bold text-dull;
-}
-h4 {
-  @apply capitalize text-base tablet:text-lg laptop:text-xl laptopl:text-2xl 4kay:text-4xl font-bold text-dark;
-}
-h5 {
-  @apply uppercase text-lg tablet:text-xl laptop:text-2xl laptopl:text-3xl 4kay:text-4xl font-bold text-dull;
+/* animation*/
+
+@layer utilities {
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(200%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @keyframes fadeLeftRight {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes fadeRightLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes swingIn {
+    0% {
+      transform: rotateX(-100deg);
+
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+  @keyframes rollInBlurredLeft {
+    0% {
+      transform: translateX(-1000px) rotate(-720deg) scale(0%);
+      filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) rotate(0deg) scale(100%);
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes background {
+    0% {
+      transform: translateY(0);
+
+      transform-origin: 50% 16%;
+    }
+    100% {
+      transform: translateY(-15px);
+
+      transform-origin: top;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .fadeInUp {
+    animation: fadeInUp 1s;
+  }
+  .fadeRightLeft {
+    animation: fadeRightLeft 2.5s;
+  }
+  .fadeLeftRight {
+    animation: fadeLeftRight 2.5s;
+  }
+  .fadeIn {
+    animation: fadeIn 2.5s;
+  }
+  .swingIn {
+    animation: swingIn 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  }
+  .rollInBlurredLeft {
+    animation: rollInBlurredLeft 1.55s cubic-bezier(0.23, 1, 0.32, 1) both;
+  }
+  .background {
+    animation: background 2s ease-out both;
+  }
+  .fadeIn {
+    animation: fadeIn 3s;
+  }
 }
