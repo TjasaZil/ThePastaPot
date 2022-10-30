@@ -1,15 +1,24 @@
 <template>
   <section
     id="home"
-    class="bg-image bg-primary w-full mt-12 text-highligth font-semibold"
+    class="bg-image bg-primary w-full mt-12 tablet:mt-16 laptop:mt-18 laptopl:mt-20 4kay:mt-32 text-highligth font-semibold"
   >
     <div
-      class="flex flex-col justify-center items-center mx-auto text-center p-3 space-y-3"
+      class="flex flex-col justify-center items-center mx-auto text-center p-3 space-y-3 tablet:space-y-5 laptop:space-y-7 laptopl:space-y-9 4kay:space-y-11"
     >
-      <img class="mx-auto w-24" src="@/assets/logo.png" alt="logo image" />
-      <h2 class="uppercase text-lg">Pasta with a soul</h2>
+      <img
+        class="mx-auto w-24 tablet:w-32 tablet:mt-5 laptop:mt-6 laptop:w-36 laptopl:w-40 4kay:mt-12 4kay:w-52"
+        src="@/assets/logo.png"
+        alt="logo image"
+      />
+      <h2>Pasta with a soul</h2>
       <hr class="w-4/6 h-1 bg-dull border border-solid border-dull" />
-      <div role="paragraph">Takeaway | Delivery</div>
+      <div
+        role="paragraph"
+        class="tablet:text-base tablet:pb-2 laptop:text-lg laptop:pb-4 laptopl:text-xl laptopl:pb-6 4kay:text-2xl 4kay:pb-8"
+      >
+        Takeaway | Delivery
+      </div>
     </div>
   </section>
 </template>

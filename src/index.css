@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-  @apply uppercase text-3xl font-extrabold;
+  @apply uppercase text-lg tablet:text-xl laptopl:text-2xl 4kay:text-4xl font-extrabold;
 }
 h3 {
   @apply uppercase text-2xl font-bold text-dull;
