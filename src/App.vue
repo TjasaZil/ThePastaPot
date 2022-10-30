@@ -6,9 +6,11 @@
     <ChefComponent />
     <WorkingHours />
     <MenuComponent />
-    <GalleryComponent />
-    <ContactComponent />
-    <FooterComponent />
+    <section class="bg-dark">
+      <GalleryComponent />
+      <ContactComponent />
+      <FooterComponent />
+    </section>
   </section>
 </template>
 

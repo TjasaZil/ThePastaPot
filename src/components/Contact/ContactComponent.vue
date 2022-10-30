@@ -22,7 +22,7 @@
     >
       follow us on social media
     </div>
-    <div class="flex justify-center items-center space-x-3 4kay:space-x-6">
+    <div class="flex justify-center items-center space-x-3 4kay:space-x-6 pb-3">
       <img src="@/assets/contact/facebook.png" alt="facebook" class="social" />
       <img
         src="@/assets/contact/instagram.png"
