@@ -1,6 +1,6 @@
 # THE PASTA POT - a simple restaurant page
 
-This project was inspired by a [simple page from an asian restaurant](https://www.rizevaskleda.com/) that recently opened near me. I really liket the simple, jet effective design and thought that this project would be great for me, to use as an exercise in testing. This is the first time I used Cypress as a testing tool for component testing. I used Jest for unit testing.<br><br>
+This project was inspired by a [simple page from an asian restaurant](https://www.rizevaskleda.com/) that recently opened near me. I really liket the simple, yet effective design and thought that this project would be great for me, to use as an exercise in testing. This is the first time I used Cypress as a testing tool for component testing. I used Jest for unit testing.<br><br>
 I followed the TDD workflow, writing a unit test in Jest, and then writing the code to make the test pass. After that I refractured the code, if needed. The project is tested extensively, probably even too much. I tested everything that I could, because I wanted to really get intimate with the syntax. I understand that in a real life project this much testing would not be required, in fact it would probably be a waste of time, since there is a lot of trivial testing.
 
 <img src="src/assets/readmePictures/UnitTesting.JPG" alt="testing" width="75%"/>
