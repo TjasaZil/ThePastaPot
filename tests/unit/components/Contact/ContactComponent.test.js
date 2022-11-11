@@ -24,28 +24,15 @@ describe("ContactComponent", () => {
       let paragraph = screen.queryAllByRole("paragraph");
       expect(paragraph.length).toBe(4);
     });
-    it("has address", () => {
+    it("has appropriate contact information", ()=>{
       render(ContactComponent);
-      let address = screen.queryByText(
-        "1972 Cottonwood Lane, Nashville, Tennessee"
-      );
-      expect(address).toBeInTheDocument();
-    });
-    it("has mail", () => {
-      render(ContactComponent);
-      let contact = screen.queryByText("thepastapot@mail.com");
-      expect(contact).toBeInTheDocument();
-    });
-    it("Has a phone number", () => {
-      render(ContactComponent);
-      let number = screen.queryByText("+1 228-221-2686");
-      expect(number).toBeInTheDocument();
-    });
-    it("has social media text", () => {
-      render(ContactComponent);
-      let social = screen.queryByText("follow us on social media");
-      expect(social).toBeInTheDocument();
-    });
+      const contactArray=["1972 Cottonwood Lane, Nashville, Tennessee","thepastapot@mail.com","+1 228-221-2686","follow us on social media"]
+      for(let i = 0; i<contactArray.length; i++){
+        const contact = screen.queryByText(contactArray[i]);
+        expect(contact).toBeInTheDocument()
+      }
+    })
+    
     it("has 4 icons", () => {
       render(ContactComponent);
       let image = screen.queryAllByRole("img");
@@ -53,25 +40,13 @@ describe("ContactComponent", () => {
     });
   });
   describe("testing image visibility", () => {
-    it("has mail icon", () => {
+    it("has appropriate alt text on images", ()=>{
       render(ContactComponent);
-      let mail = screen.queryByAltText("email");
-      expect(mail).toBeVisible();
-    });
-    it("has phone icon", () => {
-      render(ContactComponent);
-      let phone = screen.queryByAltText("phone");
-      expect(phone).toBeVisible();
-    });
-    it("has facebook icon", () => {
-      render(ContactComponent);
-      let facebook = screen.queryByAltText("facebook");
-      expect(facebook).toBeInTheDocument();
-    });
-    it("has instagram icon", () => {
-      render(ContactComponent);
-      let instagram = screen.queryByAltText("instagram");
-      expect(instagram).toBeInTheDocument();
-    });
+      const altArray = ["email","phone","facebook","instagram"]
+      for(let i =0; i<altArray.length;i++){
+        const alt = screen.queryByAltText(altArray[i]);
+        expect(alt).toBeInTheDocument()
+      }
+    })
   });
 });

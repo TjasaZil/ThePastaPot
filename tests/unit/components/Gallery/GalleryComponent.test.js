@@ -29,79 +29,23 @@ describe("GalleryComponent", () => {
       let listItems = screen.queryAllByRole("listitem");
       expect(listItems.length).toBe(12);
     });
-    it("has 12 images", () => {
-      render(GalleryComponent);
-      let img = screen.queryAllByRole("img");
-      expect(img.length).toBe(12);
+    
+    describe("images ", () => {
+      it("has 12 images", () => {
+        render(GalleryComponent);
+        let img = screen.queryAllByRole("img");
+        expect(img.length).toBe(12);
+      });
+      it("has appropriate alt text", ()=>{
+        render(GalleryComponent);
+        let altArray = ["pasta1", "pasta2", "pasta3", "pasta4", "pasta5", "pasta6", "pasta7", "pasta8", "pasta9", "pasta10", "pasta11", "pasta12"]
+        for(let i = 0; i<altArray.length;i++){
+          const alt=screen.queryByAltText(altArray[i]);
+          expect(alt).toBeInTheDocument()
+        }
+      })
+     
     });
-    describe("images are visible", () => {
-      it("has visible image1", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta1");
-        expect(img).toBeVisible();
-      });
-      it("has visible image2", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta2");
-        expect(img).toBeVisible();
-      });
-      it("has visible image3", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta3");
-        expect(img).toBeVisible();
-      });
-      it("has visible image4", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta4");
-        expect(img).toBeVisible();
-      });
-      it("has visible image5", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta5");
-        expect(img).toBeVisible();
-      });
-      it("has visible image6", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta6");
-        expect(img).toBeVisible();
-      });
-      it("has visible image7", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta7");
-        expect(img).toBeVisible();
-      });
-      it("has visible image8", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta8");
-        expect(img).toBeVisible();
-      });
-      it("has visible image9", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta9");
-        expect(img).toBeVisible();
-      });
-      it("has visible image10", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta10");
-        expect(img).toBeVisible();
-      });
-      it("has visible image11", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta11");
-        expect(img).toBeVisible();
-      });
-      it("has visible image12", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta12");
-        expect(img).toBeVisible();
-      });
-    });
-    /*describe("appropriate image link", () => {
-      it("has appropriate image1 link", () => {
-        render(GalleryComponent);
-        let img = screen.queryByAltText("pasta1");
-        expect(img).toHaveAttribute("src", "@/assets/gallery/pasta1.jpg");
-      });
-    });*/
+    
   });
 });

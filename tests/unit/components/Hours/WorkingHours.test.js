@@ -4,15 +4,10 @@ import WorkingHours from "@/components/Hours/WorkingHours.vue";
 
 describe("WorkingHours", () => {
   describe("layout", () => {
-    it("has heading", () => {
+    it("has 2 headings", () => {
       render(WorkingHours);
-      let heading = screen.queryByRole("heading");
-      expect(heading).toBeInTheDocument();
-    });
-    it("has appropriate headinh: 'working hours'", () => {
-      render(WorkingHours);
-      let heading = screen.queryByText("working hours");
-      expect(heading).toBeInTheDocument();
+      let heading = screen.queryAllByRole("heading");
+      expect(heading.length).toBe(2);
     });
     it("has two separators", () => {
       render(WorkingHours);
@@ -22,34 +17,18 @@ describe("WorkingHours", () => {
     it("has 5 paragraphs", () => {
       render(WorkingHours);
       let paragraph = screen.queryAllByRole("paragraph");
-      expect(paragraph.length).toBe(5);
+      expect(paragraph.length).toBe(4);
     });
-    describe("paragraph text", () => {
-      it("has 'monday - friday' text", () => {
+    describe("text", () => {
+      it("has appropriate text text", () => {
         render(WorkingHours);
-        let paragraph = screen.queryByText("monday - friday");
-        expect(paragraph).toBeInTheDocument();
+        const textArray=["working hours", "monday - friday", "10am", "8pm", "saturday - sunday", "closed"]
+        for(let i = 0; i<textArray.length; i++){
+          const text = screen.queryByText(textArray[i]);
+          expect(text).toBeInTheDocument()
+        }
       });
-      it("has '10am' text", () => {
-        render(WorkingHours);
-        let paragraph = screen.queryByText("10am");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has '8pm' text", () => {
-        render(WorkingHours);
-        let paragraph = screen.queryByText("8pm");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has saturday - sunday text", () => {
-        render(WorkingHours);
-        let paragraph = screen.queryByText("saturday - sunday");
-        expect(paragraph).toBeInTheDocument();
-      });
-      it("has 'closed' text", () => {
-        render(WorkingHours);
-        let paragraph = screen.queryByText("closed");
-        expect(paragraph).toBeInTheDocument();
-      });
+      
     });
   });
 });

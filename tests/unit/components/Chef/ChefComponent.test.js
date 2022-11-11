@@ -9,21 +9,21 @@ describe("ChefComponent", () => {
       let heading = screen.queryAllByRole("heading");
       expect(heading.length).toBe(2);
     });
-    it("has appropriate big header", () => {
+    it("has appropriate headings", () => {
       render(ChefComponent);
-      let heading = screen.queryByText("chef with a capital letter");
-      expect(heading).toBeInTheDocument();
+      const headingArray = ["chef with a capital letter", "who is the master behind our food"];
+
+      for(let i = 0; i <headingArray.length; i++){
+        let heading = screen.queryByText(headingArray[i]);
+        expect(heading).toBeInTheDocument()
+      }
     });
     it("has a spacer", () => {
       render(ChefComponent);
       let separator = screen.queryByRole("separator");
       expect(separator).toBeInTheDocument();
     });
-    it("has appropriate small heading", () => {
-      render(ChefComponent);
-      let heading = screen.queryByText("who is the master behind our food");
-      expect(heading).toBeInTheDocument();
-    });
+    
     it("has two paragraphs", () => {
       render(ChefComponent);
       let paragraph = screen.queryAllByRole("paragraph");

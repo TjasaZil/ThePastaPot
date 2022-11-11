@@ -9,173 +9,44 @@ describe("MenuComponent", () => {
       let heading = screen.queryAllByRole("heading");
       expect(heading.length).toBe(37);
     });
-    it("has a menu header", () => {
+    it("has appropriate header text", ()=>{
       render(MenuComponent);
-      let menu = screen.queryByText("menu");
-      expect(menu).toBeInTheDocument();
-    });
-    it("has a pasta header", () => {
-      render(MenuComponent);
-      let pasta = screen.queryByText("pasta");
-      expect(pasta).toBeInTheDocument();
-    });
-    it("has a drinks header", () => {
-      render(MenuComponent);
-      let drinks = screen.queryByText("drinks");
-      expect(drinks).toBeInTheDocument();
-    });
+      const menuArray=["menu","pasta","drinks"]
+      for(let i = 0; i<menuArray[i]; i++){
+        const menu = screen.queryByText(menuArray[i]);
+        expect(menu).toBeInTheDocument()
+      }
+    })
     it("has 9 paragraphs", () => {
       render(MenuComponent);
       let paragraph = screen.queryAllByRole("paragraph");
       expect(paragraph.length).toBe(17);
     });
-    describe("pasta headers", () => {
-      it("has Spaghetti alla Carbonara", () => {
+    describe("text", () => {
+      it("has appropriate pasta header text", ()=>{
         render(MenuComponent);
-        let text = screen.queryByText("Spaghetti alla Carbonara");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne all’Arrabbiata", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne all’Arrabbiata");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne al Pesto", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne al Pesto");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Pappardelle speck e gorgonzola", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Pappardelle speck e gorgonzola");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne panna e prosciutto crudo", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne panna e prosciutto crudo");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne alla “Amatriciana”", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne alla Amatriciana");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne Golose", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne Golose");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne Squisite", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Penne Squisite");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Spaghetti alla Puttanesca", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Spaghetti alla Puttanesca");
-        expect(text).toBeInTheDocument();
-      });
+      const headerArray=["Spaghetti alla Carbonara","Penne all’Arrabbiata","Penne al Pesto","Pappardelle speck e gorgonzola", "Penne panna e prosciutto crudo","Penne alla Amatriciana", "Penne Golose","Penne Squisite","Spaghetti alla Puttanesca"]
+      for(let i = 0; i<headerArray[i]; i++){
+        const header = screen.queryByText(headerArray[i]);
+        expect(header).toBeInTheDocument()
+      }
     });
-    describe("paragraph text", () => {
-      it("has Eggs, bacon, cream", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Eggs, bacon, cream");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Tomato sauce, chilli, extravirgin olive oil", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Tomato sauce, chilli, extravirgin olive oil"
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has Pasta with Pesto", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Pasta with Pesto");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Speck (Italian smoked ham), gorgonzola cheese P.D.O., cream", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Speck (Italian smoked ham), gorgonzola cheese P.D.O., cream"
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has Cream, “Sauris” raw ham P.G.I, mushrooms", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Cream, “Sauris” raw ham P.G.I, mushrooms"
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has Guanciale (cured pork cheeks), tomato sauce, chili", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Guanciale (cured pork cheeks), tomato sauce, chili"
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has Penne with buckwheat cherry tomatoes and after cooking stracciatella soft and creamy Italian cheese", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Penne with buckwheat cherry tomatoes and after cooking stracciatella soft and creamy Italian cheese"
-        );
-        expect(text).toBeInTheDocument();
-      });
-      it("has Shrimps, zucchini, cream", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Shrimps, zucchini, cream");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Anchovies in olive oil, capers, cherry tomatoes, garlic, black olives", () => {
-        render(MenuComponent);
-        let text = screen.queryByText(
-          "Anchovies in olive oil, capers, cherry tomatoes, garlic, black olives"
-        );
-        expect(text).toBeInTheDocument();
-      });
-    });
-    describe("drink headers", () => {
-      it("has Natural mineral water", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Natural mineral water");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Mineral sparkling water", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Mineral sparkling water");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Coca-cola, Coca Zero, Fanta", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Coca-cola, Coca Zero, Fanta");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Bitter Lemon, Tonic Water", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Bitter Lemon, Tonic Water");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Lemonade home made", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Lemonade home made");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Ice Tea", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Ice Tea");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Juices: peach, pear, blueberry, apple", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Juices: peach, pear, blueberry, apple");
-        expect(text).toBeInTheDocument();
-      });
-      it("has Cockta - Herbal Cola", () => {
-        render(MenuComponent);
-        let text = screen.queryByText("Cockta - Herbal Cola");
-        expect(text).toBeInTheDocument();
-      });
+    it("has appropriate food paragraph text", ()=>{
+      render(MenuComponent);
+      const paragraphArray=["Eggs, bacon, cream","Tomato sauce, chilli, extravirgin olive oil","Pasta with Pesto","Speck (Italian smoked ham), gorgonzola cheese P.D.O., cream", "Cream, “Sauris” raw ham P.G.I, mushrooms", "Guanciale (cured pork cheeks), tomato sauce, chili", "Penne with buckwheat cherry tomatoes and after cooking stracciatella soft and creamy Italian cheese", "Shrimps, zucchini, cream", "Anchovies in olive oil, capers, cherry tomatoes, garlic, black olives"]
+      for(let i = 0; i<paragraphArray[i]; i++){
+        const paragraph = screen.queryByText(paragraphArray[i]);
+        expect(paragraph).toBeInTheDocument()
+      }
+    })
+    it("has appropriate drink paragraph text", ()=>{
+      render(MenuComponent);
+      const paragraphArray=["Natural mineral water","Mineral sparkling water", "Coca-cola, Coca Zero, Fanta", "Bitter Lemon, Tonic Water", "Lemonade home made", "Ice Tea", "Juices: peach, pear, blueberry, apple", "Cockta - Herbal Cola"]
+      for(let i = 0; i<paragraphArray[i]; i++){
+        const paragraph = screen.queryByText(paragraphArray[i]);
+        expect(paragraph).toBeInTheDocument()
+      }
+    })
     });
   });
 });

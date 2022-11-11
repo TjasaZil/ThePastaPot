@@ -30,59 +30,16 @@ describe("NavComponnet", () => {
       let links = screen.queryAllByRole("link");
       expect(links.length).toBe(5);
     });
-    describe("appropriate list item text", () => {
-      it("has listItem 'home'", () => {
-        render(NavComponent);
-        let home = screen.queryByText("home");
-        expect(home).toBeInTheDocument();
-      });
-      it("has listItem 'about us'", () => {
-        render(NavComponent);
-        let aboutUs = screen.queryByText("about us");
-        expect(aboutUs).toBeInTheDocument();
-      });
-      it("has listItem 'menu'", () => {
-        render(NavComponent);
-        let menu = screen.queryByText("menu");
-        expect(menu).toBeInTheDocument();
-      });
-      it("has listItem 'gallery'", () => {
-        render(NavComponent);
-        let gallery = screen.queryByText("gallery");
-        expect(gallery).toBeInTheDocument();
-      });
-      it("has listItem 'contact'", () => {
-        render(NavComponent);
-        let contact = screen.queryByText("contact");
-        expect(contact).toBeInTheDocument();
-      });
-    });
-    describe("has appropriate link attributes", () => {
-      it("has link attribute '#home'", () => {
-        render(NavComponent);
-        let home = screen.queryByText("home");
-        expect(home).toHaveAttribute("href", "#home");
-      });
-      it("has link attribute '#about-us'", () => {
-        render(NavComponent);
-        let aboutUs = screen.queryByText("about us");
-        expect(aboutUs).toHaveAttribute("href", "#about-us");
-      });
-      it("has attribute '#menu'", () => {
-        render(NavComponent);
-        let menu = screen.queryByText("menu");
-        expect(menu).toHaveAttribute("href", "#menu");
-      });
-      it("has attribute '#gallery'", () => {
-        render(NavComponent);
-        let gallery = screen.queryByText("gallery");
-        expect(gallery).toHaveAttribute("href", "#gallery");
-      });
-      it("has attribute '#contact'", () => {
-        render(NavComponent);
-        let contact = screen.queryByText("contact");
-        expect(contact).toHaveAttribute("href", "#contact");
-      });
+    it("has apropriate list item text", async () => {
+      const user = userEvent.setup();
+      render(NavComponent);
+      let hamburger = screen.queryByRole("img");
+      await user.click(hamburger);
+      const listArray=["home","about us", "menu", "gallery", "contact"]
+      for(let i = 0; i<listArray.length; i++){
+        const list = screen.queryAllByText(listArray[i]);
+        expect(list.length).toBe(2)
+      }
     });
     describe("clicking on links goes to appropriate url", () => {
       it("goes to /#home", async () => {

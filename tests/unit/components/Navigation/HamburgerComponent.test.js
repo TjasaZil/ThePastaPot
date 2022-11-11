@@ -1,4 +1,4 @@
-import { screen, render } from "@testing-library/vue";
+import { screen, render, waitFor } from "@testing-library/vue";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import HamburgerComponent from "@/components/Navigation/HamburgerComponent.vue";
@@ -46,135 +46,28 @@ describe("HamburgerComponent", () => {
       expect(links.length).toBe(5);
     });
   });
-  describe("appropriate list item text", () => {
-    it("has home text", async () => {
+    it("has apropriate list item text", async () => {
       const user = userEvent.setup();
       render(HamburgerComponent);
       let hamburger = screen.queryByRole("img");
       await user.click(hamburger);
-      let home = screen.queryByText("home");
-      expect(home).toBeInTheDocument();
+      const listArray=["home","about us", "menu", "gallery", "contact"]
+      for(let i = 0; i<listArray.length; i++){
+        const list = screen.queryByText(listArray[i]);
+        expect(list).toBeInTheDocument()
+      }
     });
-    it("has about us text", async () => {
+    it("has appropriate attributes ", async () => {
       const user = userEvent.setup();
       render(HamburgerComponent);
       let hamburger = screen.queryByRole("img");
       await user.click(hamburger);
-      let aboutUs = screen.queryByText("about us");
-      expect(aboutUs).toBeInTheDocument();
-    });
-    it("has  menu text", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let menu = screen.queryByText("menu");
-      expect(menu).toBeInTheDocument();
-    });
-    it("has  gallery text", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let gallery = screen.queryByText("gallery");
-      expect(gallery).toBeInTheDocument();
-    });
-    it("has contact text", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let contact = screen.queryByText("contact");
-      expect(contact).toBeInTheDocument();
+      const altArray=["home","about us", "menu", "gallery", "contact"]
+      const attributeArray=["/#home","/#about-us", "/#menu", "/#gallery", "/#contact"]
+      for(let i = 0; i<attributeArray.length; i++){
+        const attribute = screen.queryByText(altArray[i]);
+        expect(window.location.href).toContain(attributeArray[i]);
+      }  
     });
   });
-  describe("appropriate link attributes", () => {
-    it("has #home attribute ", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let home = screen.queryByText("home");
-      expect(home).toHaveAttribute("href", "#home");
-    });
-    it("has #about-us attribute ", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let aboutUs = screen.queryByText("about us");
-      expect(aboutUs).toHaveAttribute("href", "#about-us");
-    });
-    it("has #home attribute ", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let menu = screen.queryByText("menu");
-      expect(menu).toHaveAttribute("href", "#menu");
-    });
-    it("has #home attribute ", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let gallery = screen.queryByText("gallery");
-      expect(gallery).toHaveAttribute("href", "#gallery");
-    });
-    it("has #home attribute ", async () => {
-      const user = userEvent.setup();
-      render(HamburgerComponent);
-      let hamburger = screen.queryByRole("img");
-      await user.click(hamburger);
-      let contact = screen.queryByText("contact");
-      expect(contact).toHaveAttribute("href", "#contact");
-    });
-    describe("clicking a link goes to appropriate url", () => {
-      it("has goes to /#home when clicking on home link ", async () => {
-        const user = userEvent.setup();
-        render(HamburgerComponent);
-        let hamburger = screen.queryByRole("img");
-        await user.click(hamburger);
-        let home = screen.queryByText("home");
-        await user.click(home);
-        expect(window.location.href).toContain("/#home");
-      });
-      it("has goes to /#about-us when clicking on home about us ", async () => {
-        const user = userEvent.setup();
-        render(HamburgerComponent);
-        let hamburger = screen.queryByRole("img");
-        await user.click(hamburger);
-        let aboutUs = screen.queryByText("about us");
-        await user.click(aboutUs);
-        expect(window.location.href).toContain("/#about-us");
-      });
-      it("has goes to /#menu when clicking on menu link ", async () => {
-        const user = userEvent.setup();
-        render(HamburgerComponent);
-        let hamburger = screen.queryByRole("img");
-        await user.click(hamburger);
-        let menu = screen.queryByText("menu");
-        await user.click(menu);
-        expect(window.location.href).toContain("/#menu");
-      });
-      it("has goes to /#gallery when clicking on gallery link ", async () => {
-        const user = userEvent.setup();
-        render(HamburgerComponent);
-        let hamburger = screen.queryByRole("img");
-        await user.click(hamburger);
-        let gallery = screen.queryByText("gallery");
-        await user.click(gallery);
-        expect(window.location.href).toContain("/#gallery");
-      });
-      it("has goes to /#contact when clicking on contact link ", async () => {
-        const user = userEvent.setup();
-        render(HamburgerComponent);
-        let hamburger = screen.queryByRole("img");
-        await user.click(hamburger);
-        let contact = screen.queryByText("contact");
-        await user.click(contact);
-        expect(window.location.href).toContain("/#contact");
-      });
-    });
-  });
-});
+

@@ -9,21 +9,14 @@ describe("FooterComponent", () => {
       let separator = screen.queryByRole("separator");
       expect(separator).toBeInTheDocument();
     });
-    it("has a copyright symbol", () => {
+    it("has proper text in footer", ()=>{
       render(FooterComponent);
-      let copyright = screen.queryByText("©");
-      expect(copyright).toBeInTheDocument();
-    });
-    it("has a proper year", () => {
-      render(FooterComponent);
-      let text = screen.queryByText("2022-");
-      expect(text).toBeInTheDocument();
-    });
-    it("has a proper text", () => {
-      render(FooterComponent);
-      let text = screen.queryByText("Zuzexx");
-      expect(text).toBeInTheDocument();
-    });
+      const textArray=["©","2022-", "Zuzexx" ];
+      for(let i = 0; i<textArray.length; i++){
+        const text=screen.queryByText(textArray[i])
+        expect(text).toBeInTheDocument()
+      }
+    })
     it("has a link", () => {
       render(FooterComponent);
       let link = screen.queryByRole("link");
@@ -39,39 +32,23 @@ describe("FooterComponent", () => {
       let image = screen.queryAllByRole("img");
       expect(image.length).toBe(2);
     });
-    it("has image with facebook alt", () => {
+    it("has proper image alt text", ()=>{
       render(FooterComponent);
-      let facebook = screen.queryByAltText("facebook");
-      expect(facebook).toBeInTheDocument();
-    });
-    it("has image with instagram alt", () => {
+      const altArray = ["facebook", "instagram"];
+      for(let i = 0; i < altArray.length;i++){
+        const alt = screen.queryByAltText(altArray[i]);
+        expect(alt).toBeInTheDocument()
+      }
+    })
+    it("has visible icons", ()=>{
       render(FooterComponent);
-      let instagram = screen.queryByAltText("instagram");
-      expect(instagram).toBeInTheDocument();
-    });
-    it("has visible facebook icon", () => {
-      render(FooterComponent);
-      let facebook = screen.queryByAltText("facebook");
-      expect(facebook).toBeVisible();
-    });
-    it("has visible instagram icon", () => {
-      render(FooterComponent);
-      let instagram = screen.queryByAltText("instagram");
-      expect(instagram).toBeVisible();
-    }); /*
-    it("has right attribute for facebook icon", () => {
-      render(FooterComponent);
-      let facebook = screen.queryByAltText("facebook");
-      let src = facebook.getAttribute("src");
-      expect(src).toBe("@/assets/contact/facebook.png");
-    });
-    it("has right attribute instagram icon", () => {
-      render(FooterComponent);
-      let instagram = screen.queryByAltText("instagram");
-      expect(instagram).toHaveAttribute(
-        "src",
-        "@/assets/contact/instagram.png"
-      );
-    });*/
+      let visibleArray= ["facebook", "instagram"];
+      for(let i = 0; i < visibleArray.length;i++){
+        const alt = screen.queryByAltText(visibleArray[i]);
+        expect(alt).toBeVisible()
+      }
+    })
+    
+    
   });
 });
